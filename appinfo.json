@@ -1,0 +1,93 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "aspowart6@gmail.com",
+    "enableMultiJS": true,
+    "longName": "AnimatedDex",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/battery.png",
+                "name": "BATTERY",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/bt-icon.png",
+                "name": "BT_ICON",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "data/azumarill.png",
+                "name": "AZUMARILL",
+                "targetPlatforms": null,
+                "type": "raw"
+            },
+            {
+                "file": "data/luxray.png",
+                "name": "LUXRAY",
+                "targetPlatforms": null,
+                "type": "raw"
+            },
+            {
+                "file": "data/lanturn.png",
+                "name": "LANTURN",
+                "targetPlatforms": null,
+                "type": "raw"
+            },
+            {
+                "file": "images/pokeball.png",
+                "menuIcon": true,
+                "name": "POKEBALL",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/bg3_.png",
+                "name": "BACKGROUND_ROUND",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "fonts/perfect-dos-vga.ttf",
+                "name": "POKEMON_16",
+                "targetPlatforms": null,
+                "type": "font"
+            },
+            {
+                "file": "fonts/perfect-dos-vga.ttf",
+                "name": "POKEMON_35",
+                "targetPlatforms": null,
+                "trackingAdjust": -4,
+                "type": "font"
+            },
+            {
+                "file": "images/pokeamie_cropped.png",
+                "name": "BACKGROUND",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "data/converted.png",
+                "name": "M_ABSOL",
+                "targetPlatforms": null,
+                "type": "raw"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "ADex",
+    "targetPlatforms": [
+        "basalt",
+        "chalk"
+    ],
+    "uuid": "5868d433-808e-4d6f-8eed-e69a17479d58",
+    "versionLabel": "0.9",
+    "watchapp": {
+        "watchface": true
+    }
+}
