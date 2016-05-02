@@ -2,12 +2,19 @@
 For Animated Pokemon Face
 
 Steps to change this watch face to your liking:
+
 1. Fork this repository and add to CloudPebble or Pebble SDK
+
 2. Change the data resources (azumarill.png, converted.png, lanturn.png, and luxray.png) to your APNGs
+
 3. Fix naming conventions as you see fit
+
 4. In main.c change lines 22 and 24 to your preferences.
+
 5. Recompile and build PBW
+
 6. Enjoy- get creative, maybe have one pokemon with all of its different animations
+
 7. Note: Be sure not to use more than 4 APNG's due to space requirements
 
 
