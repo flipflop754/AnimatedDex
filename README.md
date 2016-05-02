@@ -18,9 +18,15 @@ Steps to change this watch face to your liking:
 7. Note: Be sure not to use more than 4 APNG's due to space requirements
 
 
+
 Steps to create an Pebble Ready Gen 6 Sprite:
+
 1. Go to http://www.pkparaiso.com/xy/sprites_pokemon.php and save a gif
+
 2. Optional: Edit gif to fit pebble's color palette
+
     • Use GIMP to load gif. Change index color mode to index. Rename layers to (replace) instead of (combined)(!). Export as gif with animate option checked. Loop infinitely
+    
 3. Use gif2apng (http://gif2apng.sourceforge.net/) to convert the gif to apng
+
 4. Add as a data/raw binary resource
