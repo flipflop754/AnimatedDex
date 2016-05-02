@@ -25,7 +25,7 @@ Steps to create an Pebble Ready Gen 6 Sprite:
 
 2. Optional: Edit gif to fit pebble's color palette
 
-    • Use GIMP to load gif. Change index color mode to index. Rename layers to (replace) instead of (combined)(!). Export as gif with animate option checked. Loop infinitely
+    • Use GIMP to load gif. Change color mode to index. Rename layers to (replace) instead of (combined)(!). Export as gif with animate option checked. Loop infinitely
     
 3. Use gif2apng (http://gif2apng.sourceforge.net/) to convert the gif to apng
 
