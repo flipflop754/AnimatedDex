@@ -21,7 +21,7 @@ Steps to change this watch face to your liking:
 
 Steps to create an Pebble Ready Gen 6 Sprite:
 
-1. Go to http://www.pkparaiso.com/xy/sprites_pokemon.php and save a gif (choose 90x90 or less)
+1. Go to http://www.pkparaiso.com/xy/sprites_pokemon.php and save a gif (choose 120x120 or less)
 
 2. Optional: Edit gif to fit pebble's color palette
 
