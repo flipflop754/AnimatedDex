@@ -16,7 +16,13 @@ static int s_battery_level;
 static Layer *s_battery_level_layer;
 static GBitmap *s_battery_bitmap;
 static BitmapLayer *s_battery_image_layer;
-static uint32_t my_pokemon = RESOURCE_ID_M_ABSOL;
+//*****************************************************************************//
+//                Change these according to your preferences                   //
+// Choose 1, 2, 3, 5, 10, or 30 to update every respective number of  minute(s)
+static int refresh_time = 10;
+//Change names of resource to the names that you created. KEEP THIS TO ONLY 4 TOTAL APNGS
+static uint32_t pokemon_list[4] = {RESOURCE_ID_LUXRAY, RESOURCE_ID_LANTURN, RESOURCE_ID_AZUMARILL, RESOURCE_ID_M_ABSOL};
+//***********************************************************//
 static bool animate = true;
 
 static void update_time() {
@@ -114,9 +120,30 @@ static void handle_tap(AccelAxisType axis, int32_t direction){
   app_timer_register(10000, stop_animation, NULL);
 }
 
+static void update_sequence(){
+  if(s_sequence) {
+    gbitmap_sequence_destroy(s_sequence);
+    s_sequence = NULL;
+  }
+  if(s_bitmap) {
+    gbitmap_destroy(s_bitmap);
+    s_bitmap = NULL;
+  }
+  int random_num = rand() % 4;
+  s_sequence = gbitmap_sequence_create_with_resource(pokemon_list[random_num]);
+  s_bitmap = gbitmap_create_blank(gbitmap_sequence_get_bitmap_size(s_sequence), GBitmapFormat8Bit);
+  uint32_t first_delay_ms = 5;
+  app_timer_register(first_delay_ms, timer_handler, NULL);
+}
+
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
   update_time();
   update_date();
+  
+  if(tick_time->tm_min % refresh_time == 0){
+    APP_LOG(APP_LOG_LEVEL_INFO, "Used update sequence");
+    update_sequence();
+  }
 }
 
 static void main_window_load(Window *window){
@@ -161,7 +188,9 @@ static void main_window_load(Window *window){
   bluetooth_callback(connection_service_peek_pebble_app_connection());
   
   // Create sequence
-  s_sequence = gbitmap_sequence_create_with_resource(my_pokemon);
+  int random_num = rand() % 4;
+  s_sequence = gbitmap_sequence_create_with_resource(pokemon_list[random_num]);
+  //s_sequence = gbitmap_sequence_create_with_resource(my_pokemon);
 
   // Create blank GBitmap using APNG frame size
   GSize frame_size = gbitmap_sequence_get_bitmap_size(s_sequence);
