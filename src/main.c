@@ -44,9 +44,9 @@ static void update_date() {
   struct tm *tick_time = localtime(&temp);
 
   // Write the current hours and minutes into a buffer
-  static char s_buffer[32];
+  static char s_buffer[20];
   // Change date format depending on configuration
-  strftime(s_buffer, sizeof(s_buffer), "%a, %m %d", tick_time);
+  strftime(s_buffer, sizeof(s_buffer), "%a, %b %d", tick_time);
 
   // Display this time on the TextLayer
   text_layer_set_text(s_date_layer, s_buffer);
