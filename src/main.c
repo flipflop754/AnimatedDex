@@ -214,7 +214,7 @@ static void main_window_load(Window *window){
   
   // Create the date Layer with specific bounds
   s_date_layer = text_layer_create(
-      GRect(0, PBL_IF_ROUND_ELSE(120, 119), bounds.size.w, 50));
+      GRect(0, PBL_IF_ROUND_ELSE(120, 118), bounds.size.w, 50));
   s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_POKEMON_16));
   text_layer_set_background_color(s_date_layer, GColorClear);
   text_layer_set_text_color(s_date_layer, GColorBlack);
